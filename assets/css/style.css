@@ -24,37 +24,40 @@
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(to bottom right,
-      hsl(240, 1%, 25%) 3%,
-      hsl(0, 0%, 19%) 97%);
+      hsl(204, 20%, 96%) 3%,
+      hsl(204, 20%, 98%) 97%);
   --bg-gradient-jet: linear-gradient(to bottom right,
-      hsla(240, 1%, 18%, 0.251) 0%,
-      hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+      hsla(204, 77%, 60%, 0.15) 0%,
+      hsla(204, 77%, 60%, 0) 100%), hsl(204, 20%, 96%);
   --bg-gradient-yellow-1: linear-gradient(to bottom right,
-      hsl(45, 100%, 71%) 0%,
-      hsla(36, 100%, 69%, 0) 50%);
+      hsl(204, 77%, 60%) 0%,
+      hsla(204, 77%, 60%, 0) 50%);
   --bg-gradient-yellow-2: linear-gradient(135deg,
-      hsla(45, 100%, 71%, 0.251) 0%,
-      hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+      hsla(204, 77%, 60%, 0.251) 0%,
+      hsla(204, 77%, 60%, 0) 59.86%), hsl(204, 20%, 96%);
   --border-gradient-onyx: linear-gradient(to bottom right,
-      hsl(0, 0%, 25%) 0%,
-      hsla(0, 0%, 25%, 0) 50%);
+      hsl(204, 20%, 85%) 0%,
+      hsla(204, 20%, 85%, 0) 50%);
   --text-gradient-yellow: linear-gradient(to right,
-      hsl(45, 100%, 72%),
-      hsl(35, 100%, 68%));
+      hsl(204, 77%, 60%),
+      hsl(204, 77%, 50%));
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --jet: hsl(204, 20%, 90%);
+  --onyx: hsl(204, 20%, 90%);
+  --eerie-black-1: hsl(204, 30%, 98%);
+  --eerie-black-2: hsl(204, 30%, 96%);
+  --smoky-black: hsl(204, 30%, 94%);
+  --white-1: hsl(204, 30%, 20%);
+  --white-2: hsl(204, 30%, 30%);
+
+  /* Accent Color (CV Blue) */
+  --orange-yellow-crayola: hsl(204, 77%, 60%);
+  --vegas-gold: hsl(204, 77%, 60%);
+
+  --light-gray: hsl(204, 10%, 40%);
+  --light-gray-70: hsla(204, 10%, 40%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -951,10 +954,9 @@ main {
 }
 
 .skills-item {
-  background: var(--border-gradient-onyx);
-  color: var(--light-gray);
+  color: #fff;
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-500);
   padding: 8px 16px;
   border-radius: 50px;
   box-shadow: var(--shadow-2);
@@ -963,13 +965,58 @@ main {
 }
 
 .skills-item::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: var(--bg-gradient-jet);
-  border-radius: inherit;
-  z-index: -1;
+  display: none;
 }
+
+/* Cycle through vibrant colors for skill items */
+.skills-item:nth-child(8n+1) {
+  background: hsl(204, 77%, 60%);
+  box-shadow: 0 4px 10px hsla(204, 77%, 60%, 0.3);
+}
+
+/* Blue */
+.skills-item:nth-child(8n+2) {
+  background: hsl(145, 63%, 42%);
+  box-shadow: 0 4px 10px hsla(145, 63%, 42%, 0.3);
+}
+
+/* Green */
+.skills-item:nth-child(8n+3) {
+  background: hsl(260, 60%, 60%);
+  box-shadow: 0 4px 10px hsla(260, 60%, 60%, 0.3);
+}
+
+/* Purple */
+.skills-item:nth-child(8n+4) {
+  background: hsl(29, 90%, 55%);
+  box-shadow: 0 4px 10px hsla(29, 90%, 55%, 0.3);
+}
+
+/* Orange */
+.skills-item:nth-child(8n+5) {
+  background: hsl(340, 70%, 55%);
+  box-shadow: 0 4px 10px hsla(340, 70%, 55%, 0.3);
+}
+
+/* Pink */
+.skills-item:nth-child(8n+6) {
+  background: hsl(180, 70%, 40%);
+  box-shadow: 0 4px 10px hsla(180, 70%, 40%, 0.3);
+}
+
+/* Teal */
+.skills-item:nth-child(8n+7) {
+  background: hsl(45, 90%, 50%);
+  box-shadow: 0 4px 10px hsla(45, 90%, 50%, 0.3);
+}
+
+/* Gold */
+.skills-item:nth-child(8n+8) {
+  background: hsl(0, 70%, 60%);
+  box-shadow: 0 4px 10px hsla(0, 70%, 60%, 0.3);
+}
+
+/* Red */
 
 .skills-category-title {
   color: var(--white-1);
